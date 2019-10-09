@@ -1,4 +1,4 @@
-data <- read.csv("iris.data")
+data <- read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data")
 colnames(data) <- c("sepal_length" , "sepal_width" , "petal_length" , "petal_width" , "species")
 summary(data)
 plot(data)
