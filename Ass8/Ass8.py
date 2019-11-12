@@ -70,6 +70,28 @@ acc = (c[0][0]+c[1][1])*100/418
 
 print(acc)
 
+clas = DecisionTreeClassifier(criterion = "gini", random_state = 1)
+
+
+
+clas.fit(train,ctrain)
+
+y = read_csv("gender_submission.csv", usecols = ['Survived'])
+y = np.array(y)
+y = [i[0] for i in y]
+y_hat = clas.predict(test)
+y_hat = [i for i in y_hat]
+
+from sklearn.metrics import confusion_matrix
+
+c = confusion_matrix(y,y_hat)
+
+
+acc = (c[0][0]+c[1][1])*100/418
+
+
+print(acc)
+
 
 
 
