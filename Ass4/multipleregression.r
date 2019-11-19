@@ -1,4 +1,4 @@
-data <- read.csv("obese1.csv")
+data <- read.csv("obese.csv")
 summary(data)
 model <- lm(data$obese ~ data$sex + data$sbp + data$dbp + data$scl + data$age + data$bmi)
 plot(data)
